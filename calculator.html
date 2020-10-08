@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Arithmetic Calculator</title>
+    <style type="text/css">
+        body {
+            text-align: center;
+            padding-top: 200px;
+            font-family: Segoe, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+           
+           background-color: #0cbaba;
+background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+
+        }
+
+
+        .lines {
+            font-size: 20px;
+        }
+        
+        .made-by {
+            position: absolute;
+            bottom: 20px;
+            
+            left: 20px;
+            text-align: center;
+            background-color: antiquewhite;
+        }
+
+        ._box {
+     position: relative;
+     display: block;
+     width: 100%;
+     max-width: 400px;
+     margin: auto;
+     padding: 30px;
+     background-color: white;
+     border: dashed 5px #33ccff;
+     box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+     border-radius: 5px;
+   }
+        
+        .button-1 {
+            box-shadow: inset 0 1px 0 0 #4d73bf;
+            background: #8eabe7;
+            border: solid 4px black;
+            color: white;
+            text-shadow: 0 1px 0 #3359a5;
+            border-radius: 6px;
+            font-size: 18px;
+        }
+        
+        #demo {
+            font-size: 20px;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1><b>Basic Arithmetic Calculator</b></h1>
+</br></br></br></br></br>
+    <p class="lines button-big _box">2 operands and 1 operator( + , - , * , / )
+    </p>
+</br></br>
+    <button class="button-1  " onclick="myFunction()">CLick me</button>
+    <p id="demo"></p>
+    <script>
+        function myFunction() {
+            var num1 = prompt("Enter first number:");
+            var op = prompt("Enter operation", "+");
+            var num2 = prompt("Enter second number:");
+            switch (op) {
+                case "+":
+                    var res = eval(num1) + eval(num2);
+
+                    break;
+                case "-":
+                    var res = num1 - num2;
+                    break;
+                case "/":
+                    var res = num1 / num2;
+                    break;
+                case "%":
+                    var res = num1 % num2;
+                    break;
+                default:
+                    var res = num1 * num2;
+            }
+            document.getElementById("demo").innerHTML = "Result of " + num1 + op +
+                num2 + " is " + res;
+        }
+    </script>
+    <div class="made-by">
+        Made By Vidhu Verma
+        <br> 2019UCS2052
+    </div>
+</body>
+
+</html>
